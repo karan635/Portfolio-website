@@ -1,0 +1,173 @@
+{
+  "botInfo": {
+    "name": "Spidey Bot",
+    "tagline": "Your Friendly Neighborhood AI Assistant",
+    "creator": "Karan Parwani",
+    "role": "Portfolio Concierge & AI Guide",
+    "version": "1.0.0"
+  },
+  "greetings": [
+    {
+      "id": "welcome",
+      "text": "Hey there! 🕷️ I'm **Spidey Bot**, Karan Parwani's portfolio assistant. Whether you're looking for projects, skills, experience, or want to get in touch, I've got your back. What would you like to explore?",
+      "quickReplies": [
+        "Show Projects 🚀",
+        "Technical Skills 💻",
+        "Experience 💼",
+        "Download Resume 📄",
+        "Contact Karan ✉️",
+        "About Karan 🧑‍💻"
+      ]
+    }
+  ],
+  "intents": [
+    {
+      "intent": "about",
+      "keywords": [
+        "about", "who is karan", "who are you", "bio", "background", "introduce",
+        "summary", "profile", "overview", "karan parwani"
+      ],
+      "response": "Karan Parwani is an **AI Developer and Data Science specialist** currently pursuing his **MCA at Birla Institute of Technology (BIT), Mesra** (2025–2027).\n\nHe holds a BCA in AI & Data Science from Poornima University (CGPA: 7.60). He specializes in **Generative AI, Multilingual RAG systems, LLM orchestration**, and full-stack web applications. He's actively seeking AI Engineer, Data Scientist, or Data Analyst roles!",
+      "actions": [
+        { "type": "navigate", "target": "about", "label": "Read Full Bio 📖" },
+        { "type": "navigate", "target": "contact", "label": "Get in Touch ✉️" }
+      ]
+    },
+    {
+      "intent": "projects_all",
+      "keywords": [
+        "project", "projects", "work", "portfolio", "what built", "apps", "showcase", "creations"
+      ],
+      "response": "Here are Karan's flagship featured projects:\n\n1. **UniAssist-AI** — Multilingual university admissions RAG chatbot (FastAPI, LangChain, FAISS, Groq) supporting English, Hindi, and Japanese.\n2. **AI Job Hunter** — Full-stack career platform (Next.js, Supabase, Clerk, Groq, AI SDK) featuring ATS resume parsing, scoring, and cover letter generation.\n3. **Open Source** — Active contributor with GirlScript Summer of Code (GSSoC 2026).",
+      "actions": [
+        { "type": "selectProject", "target": "01", "label": "View UniAssist-AI 🎓" },
+        { "type": "selectProject", "target": "02", "label": "View AI Job Hunter 💼" },
+        { "type": "navigate", "target": "projects", "label": "Go to Projects Section 🚀" }
+      ]
+    },
+    {
+      "intent": "project_uniassist",
+      "keywords": [
+        "uniassist", "uniassist-ai", "rag", "multilingual", "admissions", "faiss", "university chatbot"
+      ],
+      "response": "**UniAssist-AI** is a production-grade Retrieval-Augmented Generation (RAG) university admissions chatbot.\n\n• **Core Features:** Ingests admission PDFs, performs section-aware chunking, FAISS vector retrieval, and answers queries with citations.\n• **Multilingual:** Handles English, Hindi, and Japanese via auto language detection and pre-retrieval translation.\n• **Tech Stack:** Python, FastAPI, LangChain, FAISS, Groq LLM, HuggingFace Embeddings.",
+      "actions": [
+        { "type": "selectProject", "target": "01", "label": "Open Project Details 🔎" }
+      ]
+    },
+    {
+      "intent": "project_job_hunter",
+      "keywords": [
+        "job hunter", "career", "ats", "resume parser", "cover letter", "interview prep"
+      ],
+      "response": "**AI Job Hunter** is a comprehensive full-stack career platform designed to accelerate the job application process.\n\n• **Core Features:** Resume PDF parsing, ATS scoring & keyword gap analysis, AI cover-letter writer, and tailored interview prep question generator.\n• **Tech Stack:** Next.js, TypeScript, Supabase, Clerk Auth, Groq LLM, Vercel AI SDK.",
+      "actions": [
+        { "type": "selectProject", "target": "02", "label": "Open Project Details 🔎" }
+      ]
+    },
+    {
+      "intent": "skills",
+      "keywords": [
+        "skill", "skills", "tech stack", "technologies", "tools", "stack", "python", "react", "programming languages"
+      ],
+      "response": "Karan's technical expertise spans 6 key domains:\n\n🧠 **AI & Machine Learning:** RAG, LangChain, FAISS, HuggingFace, Groq, Gemini API, Prompt Engineering, TensorFlow, Scikit-learn, CNN, Hyperparameter Tuning\n📊 **Data Science:** Pandas, NumPy, Exploratory Data Analysis (EDA), Statistical Testing, Matplotlib, Seaborn\n🌐 **Web Development:** Next.js, React, TypeScript, FastAPI, Streamlit, REST APIs\n🗄️ **Databases:** PostgreSQL (Supabase), SQL, FAISS Vector DB\n💻 **Languages:** Python, SQL, Java, C, R\n🛠️ **Tools:** Git/GitHub, OpenCV, Hugging Face Hub, Google Cloud Platform (Foundational)",
+      "actions": [
+        { "type": "navigate", "target": "skills", "label": "Explore Skills Matrix 💻" }
+      ]
+    },
+    {
+      "intent": "experience",
+      "keywords": [
+        "experience", "work", "job", "internship", "intern", "company", "grras", "global bizz", "history"
+      ],
+      "response": "Here is Karan's professional experience:\n\n1. **Frontend Developer Intern** @ *Global Bizz Tech Solutions* (May 2026 — Jul 2026 · Remote)\n   • Built responsive UI components with React & Next.js.\n   • Translated design systems into accessible, performant web interfaces.\n\n2. **Data Science Intern** @ *Grras Solutions Pvt. Ltd.* (May 2024 — Jul 2024 · Jaipur)\n   • Built & tuned ML classification models with Scikit-learn.\n   • Conducted end-to-end dataset preprocessing, EDA, and SQL querying for stakeholder insights.",
+      "actions": [
+        { "type": "navigate", "target": "experience", "label": "View Experience Timeline 💼" }
+      ]
+    },
+    {
+      "intent": "education",
+      "keywords": [
+        "education", "college", "degree", "university", "mca", "bca", "bit mesra", "poornima", "grades", "cgpa", "study"
+      ],
+      "response": "🎓 **Educational Background:**\n\n• **Master of Computer Application (MCA)**\n  *Birla Institute of Technology (BIT), Mesra* (Aug 2025 — Apr 2027)\n  *Location:* Jaipur Campus\n\n• **Bachelor of Computer Application (BCA)**\n  *Poornima University* (Sep 2022 — Jul 2025)\n  *Specialization:* AI & Data Science · **CGPA: 7.60**",
+      "actions": [
+        { "type": "navigate", "target": "education", "label": "View Education Details 🎓" }
+      ]
+    },
+    {
+      "intent": "certifications",
+      "keywords": [
+        "certification", "certifications", "certificate", "credentials", "forage", "deloitte", "tata", "google cloud", "gdsc"
+      ],
+      "response": "📜 **Certifications & Simulations:**\n\n1. **Tata Group Data Analytics Job Simulation** (Forage, Jun 2025)\n2. **Deloitte Australia Data Analytics Job Simulation** (Forage, May 2025)\n3. **Generative AI & Google Cloud Computing Foundations** (Google Cloud Study Jam, GDSC)",
+      "actions": [
+        { "type": "navigate", "target": "certifications", "label": "View Certifications 📜" }
+      ]
+    },
+    {
+      "intent": "contact",
+      "keywords": [
+        "contact", "email", "reach", "hire", "message", "phone", "talk", "touch", "connect"
+      ],
+      "response": "You can reach Karan directly through:\n\n✉️ **Email:** Karanparwani9904@gmail.com\n💼 **LinkedIn:** linkedin.com/in/karan-parwani\n🐙 **GitHub:** github.com/karan635\n📍 **Location:** Jaipur, Rajasthan / Open to Remote & Relocation\n\nFeel free to send a message via the on-page contact form!",
+      "actions": [
+        { "type": "navigate", "target": "contact", "label": "Open Contact Form ✉️" },
+        { "type": "copy", "target": "Karanparwani9904@gmail.com", "label": "Copy Email Address 📋" }
+      ]
+    },
+    {
+      "intent": "resume",
+      "keywords": [
+        "resume", "cv", "download resume", "pdf", "curriculum vitae", "biodata"
+      ],
+      "response": "📄 You can view and download Karan's up-to-date resume in PDF format right away! It details his AI engineering projects, data science internships, and technical competencies.",
+      "actions": [
+        { "type": "downloadResume", "label": "Download Resume PDF 📥" }
+      ]
+    },
+    {
+      "intent": "social",
+      "keywords": [
+        "github", "linkedin", "social", "links", "twitter", "profile", "handles", "web"
+      ],
+      "response": "Here are Karan's verified profiles:\n\n• **GitHub:** [github.com/karan635](https://github.com/karan635)\n• **LinkedIn:** [linkedin.com/in/karan-parwani](https://linkedin.com/in/karan-parwani)\n• **Email:** [Karanparwani9904@gmail.com](mailto:Karanparwani9904@gmail.com)",
+      "actions": [
+        { "type": "openExternal", "target": "https://github.com/karan635", "label": "GitHub Profile 🐙" },
+        { "type": "openExternal", "target": "https://linkedin.com/in/karan-parwani", "label": "LinkedIn Profile 💼" }
+      ]
+    },
+    {
+      "intent": "easter_egg_spiderman",
+      "keywords": [
+        "spiderman", "spider-man", "spider", "peter parker", "web", "web slinger", "friendly neighborhood", "avenger", "marvel"
+      ],
+      "response": "🕷️ *\"With great power comes great responsibility!\"*\n\nJust like Spidey patrols the city, I patrol Karan's portfolio to keep bugs at bay and assist awesome visitors like you. Can I web-shoot you toward his projects or resume?",
+      "actions": [
+        { "type": "selectProject", "target": "01", "label": "Check Projects 🚀" },
+        { "type": "downloadResume", "label": "Get Resume 📄" }
+      ]
+    },
+    {
+      "intent": "hire_status",
+      "keywords": [
+        "hire", "hiring", "open to work", "roles", "opportunity", "available", "full time", "contract"
+      ],
+      "response": "Yes! Karan is **actively looking for opportunities** as an **AI Engineer, Data Scientist, or Data Analyst**.\n\nHe brings strong practical experience building RAG architectures, working with LLM APIs, predictive ML models, and modern web frameworks.",
+      "actions": [
+        { "type": "navigate", "target": "contact", "label": "Contact for Opportunities 💼" },
+        { "type": "downloadResume", "label": "Download Resume 📄" }
+      ]
+    }
+  ],
+  "fallback": {
+    "text": "My spider-sense is tingling, but I didn't quite catch that! 🕸️ Try asking about Karan's **projects**, **skills**, **internships**, **education**, or how to **contact** him.",
+    "quickReplies": [
+      "Tell me about UniAssist-AI",
+      "What are his top skills?",
+      "Where did he study?",
+      "How can I contact him?",
+      "Download Resume"
+    ]
+  }
+}
