@@ -4,7 +4,7 @@
     "tagline": "Your Friendly Neighborhood AI Assistant",
     "creator": "Karan Parwani",
     "role": "Portfolio Concierge & AI Guide",
-    "version": "1.0.0"
+    "version": "1.1.0"
   },
   "greetings": [
     {
@@ -68,11 +68,31 @@
     {
       "intent": "skills",
       "keywords": [
-        "skill", "skills", "tech stack", "technologies", "tools", "stack", "python", "react", "programming languages"
+        "skill", "skills", "tech stack", "technologies", "tools", "stack", "react", "programming languages", "frameworks"
       ],
       "response": "Karan's technical expertise spans 6 key domains:\n\n🧠 **AI & Machine Learning:** RAG, LangChain, FAISS, HuggingFace, Groq, Gemini API, Prompt Engineering, TensorFlow, Scikit-learn, CNN, Hyperparameter Tuning\n📊 **Data Science:** Pandas, NumPy, Exploratory Data Analysis (EDA), Statistical Testing, Matplotlib, Seaborn\n🌐 **Web Development:** Next.js, React, TypeScript, FastAPI, Streamlit, REST APIs\n🗄️ **Databases:** PostgreSQL (Supabase), SQL, FAISS Vector DB\n💻 **Languages:** Python, SQL, Java, C, R\n🛠️ **Tools:** Git/GitHub, OpenCV, Hugging Face Hub, Google Cloud Platform (Foundational)",
       "actions": [
         { "type": "navigate", "target": "skills", "label": "Explore Skills Matrix 💻" }
+      ]
+    },
+    {
+      "intent": "python_tech",
+      "keywords": [
+        "python", "fastapi", "pandas", "numpy", "scikit-learn", "scikit", "sklearn", "ai libraries"
+      ],
+      "response": "Python is Karan's primary development language! 🐍\n\n• **AI/ML:** LangChain, Scikit-learn, TensorFlow, HuggingFace Transformers, FAISS vector index.\n• **Data Science:** Pandas, NumPy, Matplotlib, Seaborn for deep EDA and statistical modeling.\n• **Backend:** FastAPI for async REST microservices, RAG backends, and model serving.",
+      "actions": [
+        { "type": "navigate", "target": "skills", "label": "View Python Skills 💻" }
+      ]
+    },
+    {
+      "intent": "rag_langchain",
+      "keywords": [
+        "rag", "langchain", "faiss", "vector", "embeddings", "retrieval", "semantic search", "groq", "llm"
+      ],
+      "response": "Karan specializes in **Production RAG & LLM orchestration**:\n\n• Built section-aware PDF ingestion pipelines with chunking and HuggingFace vector embeddings.\n• Deployed low-latency FAISS indexes and optimized multi-turn retrieval with Groq LLMs.\n• Architected multilingual pipelines with auto language detection and pre-retrieval query translation.",
+      "actions": [
+        { "type": "selectProject", "target": "01", "label": "Inspect RAG Project 🎓" }
       ]
     },
     {
@@ -83,6 +103,16 @@
       "response": "Here is Karan's professional experience:\n\n1. **Frontend Developer Intern** @ *Global Bizz Tech Solutions* (May 2026 — Jul 2026 · Remote)\n   • Built responsive UI components with React & Next.js.\n   • Translated design systems into accessible, performant web interfaces.\n\n2. **Data Science Intern** @ *Grras Solutions Pvt. Ltd.* (May 2024 — Jul 2024 · Jaipur)\n   • Built & tuned ML classification models with Scikit-learn.\n   • Conducted end-to-end dataset preprocessing, EDA, and SQL querying for stakeholder insights.",
       "actions": [
         { "type": "navigate", "target": "experience", "label": "View Experience Timeline 💼" }
+      ]
+    },
+    {
+      "intent": "open_source_gssoc",
+      "keywords": [
+        "open source", "gssoc", "girlscript", "contributor", "contributions", "community"
+      ],
+      "response": "🌐 Karan is an active open-source contributor participating in **GirlScript Summer of Code (GSSoC 2026)**!\n\nHe actively contributes pull requests, collaborates on developer tools, and helps build community-driven software.",
+      "actions": [
+        { "type": "openExternal", "target": "https://github.com/karan635", "label": "View GitHub Contributions 🐙" }
       ]
     },
     {
@@ -103,6 +133,27 @@
       "response": "📜 **Certifications & Simulations:**\n\n1. **Tata Group Data Analytics Job Simulation** (Forage, Jun 2025)\n2. **Deloitte Australia Data Analytics Job Simulation** (Forage, May 2025)\n3. **Generative AI & Google Cloud Computing Foundations** (Google Cloud Study Jam, GDSC)",
       "actions": [
         { "type": "navigate", "target": "certifications", "label": "View Certifications 📜" }
+      ]
+    },
+    {
+      "intent": "location_relocate",
+      "keywords": [
+        "location", "where", "city", "relocate", "relocation", "remote", "jaipur", "based"
+      ],
+      "response": "📍 Karan is based in **Jaipur, Rajasthan, India**.\n\nHe is open to **Remote**, **Hybrid**, or **On-site** opportunities across major tech hubs (Bangalore, Hyderabad, Pune, NCR) and worldwide!",
+      "actions": [
+        { "type": "navigate", "target": "contact", "label": "Discuss Opportunities ✉️" }
+      ]
+    },
+    {
+      "intent": "why_hire",
+      "keywords": [
+        "why hire", "why should we hire", "strengths", "value", "hire karan", "fit", "qualities"
+      ],
+      "response": "Here is why Karan would be a powerhouse addition to your engineering team:\n\n1. **Pragmatic AI Engineer:** Hands-on experience building working GenAI & RAG systems from paper to production.\n2. **Full-Stack Competency:** Bridges the gap between ML models (Python, FastAPI, FAISS) and smooth user experiences (React, Next.js, TypeScript).\n3. **Strong Theoretical & Analytical Base:** Rigorous academic training in AI & Data Science with proven internship delivery.",
+      "actions": [
+        { "type": "downloadResume", "label": "Check Resume 📄" },
+        { "type": "navigate", "target": "contact", "label": "Schedule an Interview ✉️" }
       ]
     },
     {
@@ -146,6 +197,16 @@
       "actions": [
         { "type": "selectProject", "target": "01", "label": "Check Projects 🚀" },
         { "type": "downloadResume", "label": "Get Resume 📄" }
+      ]
+    },
+    {
+      "intent": "spider_joke",
+      "keywords": [
+        "joke", "spider joke", "funny", "laugh", "humor", "tell me a joke"
+      ],
+      "response": "🕷️ *Why did Spider-Man join the tech startup?*\n\nBecause he was great at **web development** and catching **bugs**! 🕸️😄\n\nNeed any real info on Karan's projects or skills?",
+      "actions": [
+        { "type": "navigate", "target": "projects", "label": "View Real Projects 🚀" }
       ]
     },
     {
